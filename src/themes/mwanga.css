@@ -1,0 +1,35 @@
+/* Coltam UI — thème MWANGA PARTNERS (mwanga.partners). Charger après coltam-ui.css. */
+[data-theme="mwanga"]{
+  --cui-font-display:"Questrial",system-ui,sans-serif;
+  --cui-font-body:"Lato",system-ui,sans-serif;
+  --cui-font-mono:"Questrial",system-ui,sans-serif;
+  --cui-weight-display:400;
+  --cui-ink:#14181a;
+  --cui-ink-muted:#5c6165;
+  --cui-bg:#ffffff;
+  --cui-surface:#ffffff;
+  --cui-surface-2:#f3f6f4;
+  --cui-line:rgba(20,24,26,.13);
+  --cui-line-strong:rgba(20,24,26,.45);
+  --cui-primary:#14181a;
+  --cui-primary-hover:#197a41;
+  --cui-on-primary:#ffffff;
+  --cui-accent:#197a41;
+  --cui-accent-soft:#e3f1e8;
+  --cui-success:#197a41;
+  --cui-success-soft:#e3f1e8;
+  --cui-warning:#8a5a00;
+  --cui-warning-soft:#fbf0d9;
+  --cui-danger:#b81c24;
+  --cui-danger-soft:#fbe6e7;
+  --cui-info:#14181a;
+  --cui-info-soft:#f3f6f4;
+  --cui-focus:#197a41;
+  --cui-radius:2px;
+  --cui-btn-case:uppercase;
+  --cui-btn-tracking:.15em;
+  --cui-btn-font:var(--cui-font-mono);
+  --cui-btn-weight:400;
+  --cui-label-font:var(--cui-font-display);
+  --cui-kicker-color:var(--cui-accent);
+}

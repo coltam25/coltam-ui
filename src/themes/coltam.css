@@ -1,0 +1,35 @@
+/* Coltam UI — thème COLTAM (coltam.fr). Charger après coltam-ui.css. */
+:root,[data-theme="coltam"]{
+  --cui-font-display:"Nunito",system-ui,sans-serif;
+  --cui-font-body:"Nunito",system-ui,sans-serif;
+  --cui-font-mono:"DM Mono","Courier New",monospace;
+  --cui-weight-display:800;
+  --cui-ink:#1a2433;
+  --cui-ink-muted:#4f5b6d;
+  --cui-bg:#f6f8fb;
+  --cui-surface:#ffffff;
+  --cui-surface-2:#eaeff5;
+  --cui-line:#d6dfe8;
+  --cui-line-strong:#8a9ab0;
+  --cui-primary:#1a2433;
+  --cui-primary-hover:#b23d23;
+  --cui-on-primary:#ffffff;
+  --cui-accent:#b23d23;
+  --cui-accent-soft:#f5e8e4;
+  --cui-success:#2a6b3f;
+  --cui-success-soft:#dff0e6;
+  --cui-warning:#8a5a00;
+  --cui-warning-soft:#fbf0d9;
+  --cui-danger:#b3261e;
+  --cui-danger-soft:#fbe7e5;
+  --cui-info:#1a4a7a;
+  --cui-info-soft:#dde8f5;
+  --cui-focus:#1a4a7a;
+  --cui-radius:4px;
+  --cui-btn-case:none;
+  --cui-btn-tracking:0;
+  --cui-btn-font:var(--cui-font-body);
+  --cui-btn-weight:700;
+  --cui-label-font:var(--cui-font-mono);
+  --cui-kicker-color:var(--cui-ink-muted);
+}

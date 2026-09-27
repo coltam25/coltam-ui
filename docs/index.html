@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="fr" data-theme="coltam">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Coltam UI — bibliothèque de composants</title>
+<meta name="description" content="Coltam UI : composants d'interface accessibles, sans dépendance et compatibles avec une CSP stricte. Une bibliothèque, deux marques en production.">
+<link rel="stylesheet" href="../src/coltam-ui.css">
+<link rel="stylesheet" href="../src/themes/coltam.css">
+<link rel="stylesheet" href="../src/themes/mwanga.css">
+<link rel="stylesheet" href="docs.css">
+</head>
+<body class="cui">
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header class="d-top">
+  <h1 class="d-brand">Coltam <span>UI</span></h1>
+  <div class="d-theme" role="group" aria-label="Thème">
+    <span>Thème</span>
+    <button type="button" class="cui-btn cui-btn--secondary cui-btn--sm" data-set-theme="coltam" aria-pressed="true">COLTAM</button>
+    <button type="button" class="cui-btn cui-btn--secondary cui-btn--sm" data-set-theme="mwanga" aria-pressed="false">Mwanga Partners</button>
+  </div>
+  <a class="cui-btn cui-btn--sm" href="https://github.com/coltam25/coltam-ui">GitHub</a>
+</header>
+
+<div class="d-layout">
+<nav class="d-nav" aria-label="Composants">
+  <ul>
+    <li><a href="#demarrer">Démarrer</a></li>
+    <li><a href="#boutons">Boutons</a></li>
+    <li><a href="#badges">Badges et sur-titre</a></li>
+    <li><a href="#cartes">Cartes</a></li>
+    <li><a href="#formulaires">Formulaires</a></li>
+    <li><a href="#alertes">Alertes</a></li>
+    <li><a href="#chiffres">Chiffres clés</a></li>
+    <li><a href="#tableau">Tableau</a></li>
+    <li><a href="#depliant">Dépliant</a></li>
+    <li><a href="#modale">Fenêtre modale</a></li>
+    <li><a href="#onglets">Onglets</a></li>
+    <li><a href="#etapes">Étapes</a></li>
+    <li><a href="#notification">Notification</a></li>
+  </ul>
+</nav>
+
+<main class="d-main" id="contenu">
+  <section class="d-hero">
+    <p class="cui-kicker">Bibliothèque de composants · version 0.1</p>
+    <h2>Une bibliothèque, deux marques en production.</h2>
+    <p>Coltam UI réunit les composants d'interface de coltam.fr et de mwanga.partners. Le même code, deux identités : changez de thème en haut de la page. Accessible, sans dépendance, compatible avec une politique de sécurité stricte.</p>
+    <dl class="cui-kpis">
+      <div class="cui-kpi"><dt class="cui-kpi__label">Composants</dt><dd class="cui-kpi__value cui-kpi__value--accent">15</dd></div>
+      <div class="cui-kpi"><dt class="cui-kpi__label">Dépendances</dt><dd class="cui-kpi__value">0</dd></div>
+      <div class="cui-kpi"><dt class="cui-kpi__label">Accessibilité</dt><dd class="cui-kpi__value cui-kpi__value--success">AA</dd><dd class="cui-kpi__note">WCAG 2.2, testé par axe-core</dd></div>
+      <div class="cui-kpi"><dt class="cui-kpi__label">Sécurité</dt><dd class="cui-kpi__value">CSP</dd><dd class="cui-kpi__note">sans style ni script en ligne</dd></div>
+    </dl>
+  </section>
+
+  <section class="d-sec" id="demarrer">
+    <h3>Démarrer</h3>
+    <p>Trois fichiers, aucune étape de compilation. Chargez la feuille de styles, un thème, puis le script (uniquement pour les onglets, les étapes, les modales et les notifications). Les polices restent hébergées par votre site.</p>
+<pre class="d-code" tabindex="0" aria-label="Installation"><code>npm install @coltam/ui
+
+&lt;link rel="stylesheet" href="/node_modules/@coltam/ui/src/coltam-ui.css"&gt;
+&lt;link rel="stylesheet" href="/node_modules/@coltam/ui/src/themes/coltam.css"&gt;
+&lt;script src="/node_modules/@coltam/ui/src/coltam-ui.js" defer&gt;&lt;/script&gt;
+
+&lt;body class="cui" data-theme="coltam"&gt; … &lt;/body&gt;</code></pre>
+  </section>
+
+  <section class="d-sec" id="boutons">
+    <h3>Boutons</h3>
+    <p>Zone cliquable d'au moins 44 px. Un lien qui ressemble à un bouton reste un lien.</p>
+    <div class="d-demo" data-demo>
+      <div class="d-row">
+        <button type="button" class="cui-btn">Demander un devis</button>
+        <button type="button" class="cui-btn cui-btn--secondary">Voir nos projets</button>
+        <button type="button" class="cui-btn cui-btn--accent">Me contacter</button>
+        <button type="button" class="cui-btn cui-btn--sm">Petit</button>
+        <button type="button" class="cui-btn" disabled>Désactivé</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="d-sec" id="badges">
+    <h3>Badges et sur-titre</h3>
+    <p>Le texte porte le sens, la couleur ne fait que le souligner.</p>
+    <div class="d-demo" data-demo>
+      <p class="cui-kicker">Réalisations &amp; prestations</p>
+      <div class="d-row">
+        <span class="cui-badge">Brouillon</span>
+        <span class="cui-badge cui-badge--accent">Projet phare</span>
+        <span class="cui-badge cui-badge--success">Payée</span>
+        <span class="cui-badge cui-badge--warning">En attente</span>
+        <span class="cui-badge cui-badge--danger">En retard</span>
+        <span class="cui-badge cui-badge--info">Nouveau</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="d-sec" id="cartes">
+    <h3>Cartes</h3>
+    <p>Conteneur neutre ; la variante interactive souligne la carte au survol et au focus clavier.</p>
+    <div class="d-demo" data-demo>
+      <div class="d-grid2">
+        <article class="cui-card cui-card--interactive">
+          <span class="cui-badge cui-badge--accent">Projet phare</span>
+          <h4 class="cui-card__title">Gestion des stocks et des révisions</h4>
+          <p class="cui-card__text">Un seul outil pour savoir quand commander chaque pièce, révisions comprises.</p>
+          <a class="cui-btn cui-btn--secondary cui-btn--sm" href="#cartes">Voir le projet</a>
+        </article>
+        <article class="cui-card cui-card--muted">
+          <span class="cui-badge">Audit</span>
+          <h4 class="cui-card__title">Mesure et vérification</h4>
+          <p class="cui-card__text">Économies d'énergie vérifiées selon un protocole reconnu.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="d-sec" id="formulaires">
+    <h3>Formulaires</h3>
+    <p>Champs natifs avec libellé associé, aide et message d'erreur reliés par <code>aria-describedby</code>.</p>
+    <div class="d-demo" data-demo>
+      <form id="demo-form" class="d-grid2">
+        <div class="cui-field">
+          <label for="f-org">Organisation</label>
+          <input class="cui-input" id="f-org" name="org" autocomplete="organization" required>
+        </div>
+        <div class="cui-field">
+          <label for="f-mail">E-mail</label>
+          <input class="cui-input" id="f-mail" type="email" autocomplete="email" aria-invalid="true" aria-describedby="f-mail-err" value="contact@">
+          <span class="cui-field__error" id="f-mail-err">Adresse incomplète.</span>
+        </div>
+        <div class="cui-field">
+          <label for="f-sujet">Sujet</label>
+          <select class="cui-input" id="f-sujet"><option>Audit énergétique</option><option>Application sur mesure</option></select>
+        </div>
+        <div class="cui-field">
+          <label for="f-msg">Votre besoin</label>
+          <textarea class="cui-input" id="f-msg" aria-describedby="f-msg-hint"></textarea>
+          <span class="cui-field__hint" id="f-msg-hint">Quelques lignes suffisent.</span>
+        </div>
+        <div class="d-row">
+          <label class="cui-check"><input type="checkbox" required> J'accepte d'être recontacté</label>
+          <label class="cui-switch"><input type="checkbox" role="switch" checked> Alertes par SMS</label>
+        </div>
+        <div><button class="cui-btn">Envoyer</button></div>
+      </form>
+    </div>
+  </section>
+
+  <section class="d-sec" id="alertes">
+    <h3>Alertes</h3>
+    <p>Messages persistants dans la page. Pour un message éphémère, utilisez la notification.</p>
+    <div class="d-demo" data-demo>
+      <div class="cui-alert"><strong>Information</strong>La synchronisation Stripe a lieu toutes les heures.</div>
+      <div class="cui-alert cui-alert--success"><strong>Paiement reçu</strong>La facture FAC-2026-031 est soldée.</div>
+      <div class="cui-alert cui-alert--warning"><strong>Révision non couverte</strong>Commander 4 filtres avant le 12 octobre.</div>
+      <div class="cui-alert cui-alert--danger" role="alert"><strong>Rupture</strong>Stock de joints à zéro sur l'atelier 2.</div>
+    </div>
+  </section>
+
+  <section class="d-sec" id="chiffres">
+    <h3>Chiffres clés</h3>
+    <p>Liste de définitions : chaque valeur reste associée à son libellé pour les lecteurs d'écran.</p>
+    <div class="d-demo" data-demo>
+      <dl class="cui-kpis">
+        <div class="cui-kpi"><dt class="cui-kpi__label">Ruptures cachées</dt><dd class="cui-kpi__value cui-kpi__value--accent">61</dd><dd class="cui-kpi__note">révélées dès l'import</dd></div>
+        <div class="cui-kpi"><dt class="cui-kpi__label">Énergie produite</dt><dd class="cui-kpi__value">1 284 MWh</dd><dd class="cui-kpi__note">sur le mois</dd></div>
+        <div class="cui-kpi"><dt class="cui-kpi__label">Disponibilité</dt><dd class="cui-kpi__value cui-kpi__value--success">98,7 %</dd><dd class="cui-kpi__note">objectif 97 %</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="d-sec" id="tableau">
+    <h3>Tableau</h3>
+    <p>Défile horizontalement sur mobile ; les nombres sont alignés à droite en chiffres tabulaires.</p>
+    <div class="d-demo" data-demo>
+      <div class="cui-table-wrap" tabindex="0" role="region" aria-label="Factures récentes">
+        <table class="cui-table">
+          <caption>Factures récentes</caption>
+          <thead><tr><th scope="col">N°</th><th scope="col">Client</th><th scope="col">Statut</th><th scope="col" class="cui-num">Montant</th></tr></thead>
+          <tbody>
+            <tr><td>FAC-2026-031</td><td>Atelier Nord</td><td><span class="cui-badge cui-badge--success">Payée</span></td><td class="cui-num">4 800,00 €</td></tr>
+            <tr><td>FAC-2026-032</td><td>Énergie Sahel</td><td><span class="cui-badge cui-badge--warning">Envoyée</span></td><td class="cui-num">12 350,00 $</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="d-sec" id="depliant">
+    <h3>Dépliant</h3>
+    <p>Éléments natifs <code>details</code> / <code>summary</code> : clavier, lecteurs d'écran et recherche dans la page fonctionnent sans script.</p>
+    <div class="d-demo" data-demo>
+      <div class="cui-accordion">
+        <details open><summary>Le besoin</summary><div class="cui-accordion__body">Six fichiers Excel, aucun ne disait quand commander.</div></details>
+        <details><summary>La solution apportée</summary><div class="cui-accordion__body">Un outil unique qui projette le stock jour après jour.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="d-sec" id="modale">
+    <h3>Fenêtre modale</h3>
+    <p>Élément natif <code>dialog</code> : le focus reste dans la fenêtre, Échap la ferme et le focus revient au bouton d'ouverture.</p>
+    <div class="d-demo" data-demo>
+      <button type="button" class="cui-btn" data-cui-open="dlg-demo">Supprimer le document</button>
+      <dialog class="cui-dialog" id="dlg-demo" aria-labelledby="dlg-demo-t">
+        <div class="cui-dialog__head"><h4 class="cui-dialog__title" id="dlg-demo-t">Supprimer ce document ?</h4><button type="button" class="cui-close" data-cui-close aria-label="Fermer">×</button></div>
+        <div class="cui-dialog__body">Le client n'y aura plus accès. Cette action est tracée dans le journal d'audit.</div>
+        <div class="cui-dialog__foot"><button type="button" class="cui-btn cui-btn--secondary" data-cui-close>Annuler</button><button type="button" class="cui-btn" data-cui-close>Supprimer</button></div>
+      </dialog>
+    </div>
+  </section>
+
+  <section class="d-sec" id="onglets">
+    <h3>Onglets</h3>
+    <p>Motif ARIA « Tabs » : flèches gauche/droite, Début et Fin pour naviguer au clavier.</p>
+    <div class="d-demo" data-demo>
+      <cui-tabs label="Back-office">
+        <div data-tab="Clients">12 clients actifs, 3 invitations en attente.</div>
+        <div data-tab="Devis">4 devis envoyés ce mois-ci.</div>
+        <div data-tab="Factures">2 factures à relancer.</div>
+      </cui-tabs>
+    </div>
+  </section>
+
+  <section class="d-sec" id="etapes">
+    <h3>Étapes</h3>
+    <p>Chaque étape vérifie ses champs (validation native) avant de passer à la suivante ; l'étape courante est annoncée.</p>
+    <div class="d-demo" data-demo>
+      <cui-stepper label="Demande d'estimation">
+        <div data-step="Vous">
+          <h4>Parlez-nous de vous</h4>
+          <div class="cui-field"><label for="s-nom">Nom</label><input class="cui-input" id="s-nom" required autocomplete="name"></div>
+          <div class="cui-step-actions"><span></span><button type="button" class="cui-btn" data-cui-next>Suivant</button></div>
+        </div>
+        <div data-step="Projet">
+          <h4>Votre projet</h4>
+          <div class="cui-field"><label for="s-type">Type</label><select class="cui-input" id="s-type"><option>Site vitrine</option><option>Application</option></select></div>
+          <div class="cui-step-actions"><button type="button" class="cui-btn cui-btn--secondary" data-cui-prev>Précédent</button><button type="button" class="cui-btn" data-cui-next>Suivant</button></div>
+        </div>
+        <div data-step="Détails">
+          <h4>Derniers détails</h4>
+          <div class="cui-field"><label for="s-delai">Délai souhaité</label><input class="cui-input" id="s-delai"></div>
+          <div class="cui-step-actions"><button type="button" class="cui-btn cui-btn--secondary" data-cui-prev>Précédent</button><button type="button" class="cui-btn">Envoyer</button></div>
+        </div>
+      </cui-stepper>
+    </div>
+  </section>
+
+  <section class="d-sec" id="notification">
+    <h3>Notification</h3>
+    <p>Message éphémère annoncé poliment aux lecteurs d'écran (<code>role="status"</code>). Un appel suffit : <code>ColtamUI.toast('…')</code>.</p>
+    <div class="d-demo" data-demo>
+      <button type="button" class="cui-btn" id="demo-toast">Envoyer le devis</button>
+    </div>
+  </section>
+</main>
+</div>
+
+<footer class="d-foot">
+  Coltam UI · licence MIT · © 2026 <a href="https://coltam.fr">COLTAM SASU</a> · Polices sous licence SIL Open Font License
+</footer>
+<script src="docs.js"></script>
+<script src="../src/coltam-ui.js"></script>
+</body>
+</html>
