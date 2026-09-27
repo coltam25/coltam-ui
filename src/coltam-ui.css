@@ -1,4 +1,4 @@
-/*! Coltam UI 0.2.0 — MIT — COLTAM SASU
+/*! Coltam UI 0.3.0 — MIT — COLTAM SASU
    Composants CSS. Charger ensuite un thème (themes/coltam.css ou themes/mwanga.css).
    Aucun style ni script en ligne requis : compatible avec une CSP stricte. */
 
@@ -23,6 +23,11 @@
 .cui-btn--secondary:hover{background:var(--cui-ink);border-color:var(--cui-ink);color:var(--cui-on-primary)}
 .cui-btn--accent{background:transparent;color:var(--cui-accent);border-color:var(--cui-accent)}
 .cui-btn--accent:hover{background:var(--cui-accent);color:#fff}
+.cui-btn--success{background:var(--cui-success);border-color:var(--cui-success);color:#fff}
+.cui-btn--success:hover{background:var(--cui-ink);border-color:var(--cui-ink)}
+.cui-btn--danger{background:var(--cui-danger);border-color:var(--cui-danger);color:#fff}
+.cui-btn--danger:hover{background:var(--cui-ink);border-color:var(--cui-ink)}
+.cui-btn--block{display:flex;width:100%}
 .cui-btn--sm{min-height:36px;padding:.45rem .9rem;font-size:12px}
 .cui-btn:disabled,.cui-btn[aria-disabled="true"]{opacity:.5;cursor:not-allowed;pointer-events:none}
 

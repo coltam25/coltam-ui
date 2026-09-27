@@ -1,4 +1,4 @@
-/*! Coltam UI 0.2.0 — MIT — COLTAM SASU
+/*! Coltam UI 0.3.0 — MIT — COLTAM SASU
    Composants interactifs. Aucun eval, aucun style en ligne, aucun gestionnaire en attribut :
    compatible avec « script-src 'self' » et « style-src 'self' ». */
 (() => {
@@ -107,7 +107,7 @@
   });
 
   window.ColtamUI = {
-    version: '0.2.0',
+    version: '0.3.0',
     toast(msg, opts) {
       let t = document.querySelector('cui-toast');
       if (!t) { t = document.createElement('cui-toast'); document.body.append(t); }
