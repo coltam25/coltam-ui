@@ -1,6 +1,6 @@
 {
   "name": "@coltam/ui",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Composants d'interface accessibles, sans dépendance et compatibles CSP stricte — thèmes COLTAM et Mwanga Partners.",
   "license": "MIT",
   "author": "COLTAM SASU <contact@coltam.fr> (https://coltam.fr)",

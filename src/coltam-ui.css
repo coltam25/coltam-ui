@@ -1,4 +1,4 @@
-/*! Coltam UI 0.1.0 — MIT — COLTAM SASU
+/*! Coltam UI 0.2.0 — MIT — COLTAM SASU
    Composants CSS. Charger ensuite un thème (themes/coltam.css ou themes/mwanga.css).
    Aucun style ni script en ligne requis : compatible avec une CSP stricte. */
 
@@ -78,6 +78,9 @@ textarea.cui-input{min-height:110px;resize:vertical}
 .cui-kpi__label{font-family:var(--cui-font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--cui-ink);order:2}
 .cui-kpi__note{font-size:13px;color:var(--cui-ink-muted);order:3}
 .cui-kpis dd{margin:0}
+.cui-kpis--2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.cui-kpis-head{display:block;border-radius:var(--cui-radius) var(--cui-radius) 0 0;background:var(--cui-ink);color:#fff;font-family:var(--cui-font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:.7rem 1rem;margin:0}
+.cui-kpis-head+.cui-kpis{border-top:0;border-radius:0 0 var(--cui-radius) var(--cui-radius)}
 
 /* ── Tableau ── */
 .cui-table-wrap{overflow-x:auto;border:1px solid var(--cui-line);border-radius:var(--cui-radius)}
